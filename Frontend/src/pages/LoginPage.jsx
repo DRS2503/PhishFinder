@@ -1,9 +1,9 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './login.css'
+import { useNavigate } from 'react-router-dom';
+import './LoginPage.css'
 
-function App() {
-
+function Login() {
+  const navigate = useNavigate();
+  
   return (
     <div className="App">
       <h1>Login</h1>
@@ -23,4 +23,4 @@ function App() {
   )
 }
 
-export default App
+export default Login
