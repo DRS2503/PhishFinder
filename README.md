@@ -24,3 +24,14 @@ go to browser and put link to the local host
 ```
 
 # Back End Dependencies
+### Prerequisites
+Before running the backend machine learning pipeline, ensure you have:
+- `venv` module (used to create virtual environments)
+
+### Starting from fresh clone
+```
+cd Backend
+python3 -m venv venv
+source venv/bin/activate (you should see (venv) next to your username in the terminal)
+pip install -r requirements.txt
+```
