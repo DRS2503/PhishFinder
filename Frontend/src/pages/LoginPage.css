@@ -6,7 +6,7 @@
 }
 
 .login-box{
-  background-color: rgb(54, 54, 55);
+  background-color: rgb(46, 84, 137);
   padding: 2em;
 }
 
@@ -15,9 +15,10 @@ input{
 }
 button{
   margin: 1em;
+  background-color: rgb(26, 42, 65);
 }
 
 .password-reset {
-  
   color: #888;
+  margin-top: 30px;
 }

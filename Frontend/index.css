@@ -5,8 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
+  background-color: rgb(26, 42, 65);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -38,6 +37,7 @@ body {
 
 .navbar ul {
   display: flex;
+  margin: 30px;
   list-style-type: none;
   margin-left: 30px;
 }
@@ -49,7 +49,7 @@ body {
   text-decoration: none;
 }
 a:hover {
-  color: #535bf2;
+  color: #7f84e7;
 }
 
 h1 {

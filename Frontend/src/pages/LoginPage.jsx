@@ -16,10 +16,7 @@ function Login() {
           <button>Login</button>
         </form>
       </div>
-
-      <a className="password-reset">
-        Forgot Password? 
-      </a>
+      <a class="password-reset">Forgot Password?</a>
     </div>
   )
 }
