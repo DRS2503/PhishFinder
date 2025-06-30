@@ -5,8 +5,16 @@
   text-align: center;
 }
 
-.card {
-  padding: 1em;
+.login-box{
+  background-color: rgb(54, 54, 55);
+  padding: 2em;
+}
+
+input{
+  margin-bottom: 20px;
+}
+button{
+  margin: 1em;
 }
 
 .password-reset {

@@ -12,7 +12,7 @@ function LandingPage() {
       <h1>Welcome to PhishFinder</h1>
       <button onClick={() => navigate('/login')}>Login</button>
       <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
+        Put a bunch of stuff down here about our project
       </p>
     </div>
   )
