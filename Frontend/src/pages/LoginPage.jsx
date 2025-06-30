@@ -13,7 +13,7 @@ function Login() {
           <input type="email" id="email" name="email"></input><br></br>
           <label for="pwd">Password</label><br></br>
           <input type="password" id="pwd" name="pwd"></input><br></br>
-          <button>Login</button>
+          <button onClick={() => navigate('/dashboard')}>Login</button>
         </form>
       </div>
       <a class="password-reset">Forgot Password?</a>
