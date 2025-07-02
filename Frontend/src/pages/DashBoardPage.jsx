@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import './DashBoardPage.css'
+import '../App.css'
 import Dropzone from '../components/Dropzone'
 
 
