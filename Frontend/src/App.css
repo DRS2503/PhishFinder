@@ -15,8 +15,6 @@
 
 
 
-
-
 /* Navigation Bar */ 
 .navbar{
   display: flex;
@@ -50,10 +48,6 @@
 
 
 /* Landing Page */
-.card {
-  padding: 2em;
-}
-
 .read-the-docs {
   color: #888;
 }
@@ -69,8 +63,7 @@
   align-items: center;
   background-color: rgb(46, 84, 137);
   padding: 2em;
-  max-width: 200px;
-  
+  max-width: 300px;
 }
 
 input{
@@ -84,4 +77,7 @@ input{
 .password-reset {
   color: #888;
   margin-top: 30px;
+}
+.form-btn{
+  margin: 20px 20px 20px 20px;
 }

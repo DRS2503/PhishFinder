@@ -33,6 +33,16 @@ h1 {
   line-height: 1.1;
 }
 
+a {
+  font-weight: 500;
+  margin: 10px;
+  color: #ffffff;
+  text-decoration: none;
+}
+a:hover {
+  color: #7f84e7;
+}
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;

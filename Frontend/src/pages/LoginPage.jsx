@@ -1,5 +1,4 @@
-import { useNavigate } from 'react-router-dom';
-import '../App.css'
+import { useNavigate, Link } from 'react-router-dom';
 
 function Login() {
   const navigate = useNavigate();
@@ -10,19 +9,19 @@ function Login() {
       <div className="login-box">
         <form action="" className="login-form">
 
-          <label for="email">Email</label><br></br>
+          <label htmlFor="email">Email</label><br></br>
           <input type="email" id="email" name="email"></input>
           
           <br></br>
 
-          <label for="pwd">Password</label><br></br>
+          <label htmlFor="pwd">Password</label><br></br>
           <input type="password" id="pwd" name="pwd"></input>
 
           <br></br>
           <button className='lbtn' onClick={() => navigate('/dashboard')}>Login</button>
         </form>
       </div>
-      <a class="password-reset">Forgot Password?</a>
+      <Link className="password-reset" to='/passreset'>Forgot Password?</Link>
     </div>
   )
 }
