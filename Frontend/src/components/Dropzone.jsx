@@ -11,7 +11,7 @@ function Dropzone({ onScanComplete }) {
       formData.append('file', file);
 
       try {
-        const response = await fetch('http://localhost:5000/upload',{
+        const response = await fetch('http://localhost:5173/upload',{
           method: 'Post',
           body: formData, 
         });
@@ -47,8 +47,8 @@ function Dropzone({ onScanComplete }) {
       <input {...getInputProps()} />
       {
         isDragActive
-          ? <p>Drop the .zip file here...</p>
-          : <p>Drag 'n' drop a .zip file here, or click to select one</p>
+          ? <p className='dropbox-text'>Drop the .zip file here...</p>
+          : <p className='dropbox-text'>Drag-n-drop a .zip file here, or click to select one</p>
       }
     </div>
   );

@@ -30,15 +30,13 @@
 }
 .navbar ul {
   display: flex;
-  margin: 30px;
+  margin: 0px;
   list-style-type: none;
-  margin-left: 30px;
+  padding: 0px;
 }
 .navbar a {
   font-weight: 500;
-  margin: 10px;
   color: #ffffff;
-  text-decoration: none;
 }
 .navbar a:hover {
   color: #7f84e7;
@@ -59,6 +57,7 @@
 
 .login-box{
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: rgb(46, 84, 137);
@@ -80,4 +79,10 @@ input{
 }
 .form-btn{
   margin: 20px 20px 20px 20px;
+}
+
+
+/** Dropbox **/
+.dropbox-text{
+  color: rgb(146, 138, 138);
 }

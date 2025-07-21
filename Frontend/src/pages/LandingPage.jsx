@@ -8,7 +8,7 @@ function LandingPage() {
     <div className="container">
       <img src='phishfinder.png' className='logo' width="300px" height="300px"></img>
       <h1>Welcome to PhishFinder</h1>
-      <button onClick={() => navigate('/login')}>Login</button>
+      <button onClick={() => navigate('/signup')}>Sign Up</button>
       <p className="read-the-docs">
         Put a bunch of stuff down here about our project
       </p>
