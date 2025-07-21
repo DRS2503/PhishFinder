@@ -1,13 +1,12 @@
 #root {
   text-align: center;
-  align-items: center;
 }
-
 
 .logo {
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
@@ -17,22 +16,21 @@
 
 /* Navigation Bar */ 
 .navbar{
+  justify-content: space-between;
   display: flex;
-  flex-grow: 1;
-  justify-content:space-between;
+  flex-wrap: wrap;
   align-items: center;
   background-color: rgb(46, 84, 137);
-  max-height: 100px;
 }
 .navbar .navbar-left{
-  align-items: center;
+  justify-content: center;
   display: flex;
 }
 .navbar ul {
-  display: flex;
+  justify-content: center;
+  padding-left: 0;
   margin: 0px;
   list-style-type: none;
-  padding: 0px;
 }
 .navbar a {
   font-weight: 500;
@@ -48,6 +46,7 @@
 /* Landing Page */
 .read-the-docs {
   color: #888;
+  margin-top: 5px;
 }
 
 

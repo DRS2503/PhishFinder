@@ -4,34 +4,24 @@ import { useAuth } from '../Context/AuthContext';
 
 
 
-export default function Signup () {
-    const emailRef = useRef()
-    const passwordRef = useRef()
-    const passwordConfirmRef = useRef()
-    const { signup } = useAuth()
-    const [error, setError] = useState('')
-    const [loadng, setLoading] = useState(false)
-    const nav = useNavigate()
+export default function Login () {
+    const emailRef = useRef();
+    const passwordRef = useRef();
+    const { login } = useAuth();
+    const [error, setError] = useState('');
+    const [loadng, setLoading] = useState(false);
+    const nav = useNavigate();
 
     async function handleSubmit(e) {
         e.preventDefault()
 
-        if (passwordRef.current.value !== passwordConfirmRef.current.value){
-            return setError("Password do not match")
-        }
-
-        if (passwordRef.current.value.length < 6){
-            return setError("Password must be 6 characters or more")
-        }
-
         try{
             setError("")
             setLoading(true)
-            await signup(emailRef.current.value, passwordRef.current.value)
+            await login(emailRef.current.value, passwordRef.current.value)
             nav('/dashboard')
         } catch (err){
-            console.error("Signup error:",err)
-            setError("Failed to create an account")
+            setError("Failed to sign in")
         }
         setLoading(false)
 
@@ -40,7 +30,7 @@ export default function Signup () {
     return (
         <>
             <div className="container">
-                <h1>Sign up</h1>
+                <h1>Login</h1>
                 <div className="login-box">
                     {error && <div style={{ color: 'red', padding: '10px', border: '1px solid red', marginBottom: '15px'}}>{error}</div>}
                     <form onSubmit={handleSubmit} className="login-form">
@@ -54,15 +44,11 @@ export default function Signup () {
                         <input type="password" id="pwd" ref={passwordRef} />
 
                         <br></br>
-
-                        <label htmlFor="confpwd">Re-Enter Password</label><br></br>
-                        <input type="password" id="confpwd" ref={passwordConfirmRef} />
-
-                        <br></br>
-                        <button  type='submit' className='lbtn'>Submit</button>
+                        <button  type='submit' className='lbtn'>Login</button>
                     </form>
                 </div>
-                <Link to="/login" className='read-the-docs'>Have An Account?</Link>
+                <Link to="/passreset" className='read-the-docs'>Forgot Password?</Link>
+                <Link to="/signup" className='read-the-docs'>Need An Account?</Link>
             </div> 
         </>
     )

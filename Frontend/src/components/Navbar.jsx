@@ -8,10 +8,10 @@ function Navbar() {
         <img src='phishfinder.png' width="75px" height="75px"></img>
         <h2>PhishFinder</h2>
       </div>
-      <ul>
+      <ul style={{marginRight:'5px'}}>
         <Link to="/">Home</Link>
         <Link to="/">About</Link>
-        <Link to="/createaccount">Login</Link>
+        <Link to="/login">Login</Link>
         <Link to="/signup">Sign Up</Link>
       </ul>
     </nav> 

@@ -1,13 +1,13 @@
-import { Auth } from '../components/signup';
+import Signup from '../components/signup'
 
 
-function Signup() {
+function SignupPage() {
   
   return (
     <>
-      <Auth />
+      <Signup />
     </>
   )
 }
 
-export default Signup
+export default SignupPage

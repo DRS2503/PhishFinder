@@ -1,6 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
+
 const firebaseConfig = {
   apiKey: "AIzaSyBKxd-JIv-7C2fIxsVpjmCQWweBmYaSpD8",
   authDomain: "phishfinder-eae9e.firebaseapp.com",

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 
 function PassReset(){
     return(
@@ -13,6 +14,7 @@ function PassReset(){
                     <button className="form-btn" type="submit">Send</button>
                 </form>
             </div>
+            <Link to="/login" className='read-the-docs'>Return</Link>
         </div>
 
         
