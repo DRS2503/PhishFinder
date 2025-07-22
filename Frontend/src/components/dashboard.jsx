@@ -22,11 +22,13 @@ export default function DashBoard() {
   return (
     <div className='container'>
       <h1>Profile</h1>
-      <div style={{marginBottom: '20px'}}>
-      <strong style={{marginBottom: '20px'}}>Email: </strong> 
-      {currentUser.email}
+      <div className="login-box">
+        <div style={{marginBottom: '20px'}}>
+          <strong style={{marginBottom: '20px'}}>Email: </strong> 
+          {currentUser.email}
+        </div>
+        <button onClick={handleLogout}>Log Out</button>
       </div>
-      <button onClick={handleLogout}>Log Out</button>
     </div>
   );
 }

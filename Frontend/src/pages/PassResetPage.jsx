@@ -1,9 +1,10 @@
-import PassReset from "../components/passreset"
+import  PassReset  from '../components/PassReset'
 
 function PassResetPage(){
     return(     
-        <PassReset />   
-    )
-}
+        <> 
+            <PassReset />
+        </>
+    )}
 
-export default PassReset
+export default PassResetPage
