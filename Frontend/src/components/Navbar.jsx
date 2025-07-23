@@ -10,7 +10,7 @@ function Navbar() {
       </div>
       <ul style={{marginRight:'5px'}}>
         <Link to="/">Home</Link>
-        <Link to="/">About</Link>
+        <Link to="/about">About</Link>
         <Link to="/login">Login</Link>
         <Link to="/signup">Sign Up</Link>
       </ul>
