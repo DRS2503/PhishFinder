@@ -19,7 +19,7 @@ def about():
       <head><title>About PhishFinder</title></head>
       <body>
         <h1>About PhishFinder</h1>
-        <p>PhishFinder is a machine learning tool that helps detect phishing websites.</p>
+        <p>PhishFinder is a machine learning tool that helps detect phishing emails.</p>
         <p>Developed by [Alexander DiCicco, Derek Schramm, Matthew Kajdasz, Lucas Hermiz].</p>
         <a href="/">Back to Home</a>
       </body>
