@@ -25,7 +25,7 @@ export function AuthProvider({children}) {
     }
 
     function resetPassword(email){
-        return auth.sendPasswordResetEmail(email)
+        return sendPasswordResetEmail(auth, email)
     }
 
     useEffect(() => {

@@ -17,8 +17,12 @@ export default function DashBoard() {
     }catch{
       setError('Failed to log out')
     }
-
   }
+
+  if(!currentUser) {
+    return <p>Loading user info...</p>
+  }
+  
   return (
     <div className='container'>
       <h1>Profile</h1>
