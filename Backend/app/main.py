@@ -20,7 +20,7 @@ def about():
       <body>
         <h1>About PhishFinder</h1>
         <p>PhishFinder is a machine learning tool that helps detect phishing websites.</p>
-        <p>Developed by [Your Name or Team].</p>
+        <p>Developed by [Alexander DiCicco, Derek Schramm, Matthew Kajdasz, Lucas Hermiz].</p>
         <a href="/">Back to Home</a>
       </body>
     </html>
