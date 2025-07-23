@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+*.pyo
+
+venv/
+.env/
+.phishfinder-env/
+env/
+ENV/
+
+
+.ipynb_checkpoints/
+
+
+.vscode/
