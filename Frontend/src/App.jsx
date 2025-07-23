@@ -7,6 +7,7 @@ import DashBoardPage from './pages/DashBoardPage'
 import Navbar from './components/Navbar'
 import LoginPage from './pages/LoginPage'
 import PassResetPage from './pages/PassResetPage';
+import AboutPage from './pages/AboutPage'
 import { AuthProvider } from './Context/AuthContext';
 
 
@@ -20,6 +21,7 @@ function App() {
           <Route exact path="/dashboard" element={<DashBoardPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path='/passreset' element={<PassResetPage />} />
+          <Route path="/about" element={<AboutPage />} />
         </Routes> 
       </AuthProvider>
 
