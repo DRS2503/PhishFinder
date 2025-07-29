@@ -1,30 +1,69 @@
-import { useDropzone } from 'react-dropzone';
+import {useCallback, useState, useEffect} from 'react';
+import {useDropzone} from 'react-dropzone';
 
-export default function Dropzone() {
-  const { getRootProps, getInputProps, isDragActive } = useDropzone({
-    accept: { 'application/zip': ['.zip'] },
-    onDrop: (acceptedFiles) => {
-      console.log('Dropped files:', acceptedFiles);
-    }
+export default function Dropzone(props) {
+  const [files, setFiles] = useState()
+
+  const {
+    acceptedFiles,
+    fileRejections,
+    getRootProps,
+    getInputProps
+  } = useDropzone({
+    accept: {
+      'text/plain': ['.txt'],
+      'message/rfc822': ['.eml']
+    }, 
   });
 
-  return (
-    <div
-      {...getRootProps()}
-      style={{
-        border: '2px solidrgb(0, 0, 0)',
-        padding: '2rem',
-        textAlign: 'center',
-        cursor: 'pointer',
-        background: isDragActive ? '#f0f8ff' : '#f9f9f9'
-      }}
-    >
-      <input {...getInputProps()} />
-      {
-        isDragActive
-          ? <p className='dropbox-text'>Drop the zip file here...</p>
-          : <p className='dropbox-text'>Drag 'n' drop a .zip file here, or click to select one</p>
+  const acceptedFileItems = acceptedFiles.map(file => (
+    
+    <li key={file.name}>
+      {file.path} - {file.size} bytes
+    </li>
+  ));
+
+  const fileRejectionItems = fileRejections.map(({ file, errors }) => (
+    <li key={file.name}>
+      {file.path} - {file.size} bytes
+      <ul>
+        {errors.map(e => (
+          <li key={e.code}>{e.message}</li>
+        ))}
+      </ul>
+    </li>
+  ));
+
+  useEffect(() => {
+    acceptedFiles.forEach((file) => {
+      const reader = new FileReader()
+
+      reader.onabort = () => console.log('file reading was aborted')
+      reader.onerror = () => console.log('file reading has failed')
+      reader.onload = () => {
+      // Do whatever you want with the file contents
+        const emailStr = reader.result
+        console.log(emailStr)
+
       }
-    </div>
+      reader.readAsText(file)
+    })
+}, [acceptedFiles]);
+
+  return (
+    <section className="container">
+      <h1>File Upload</h1>
+      <div {...getRootProps({ className: 'dropzone', style: {backgroundColor: 'white', padding: '10px'} })}>
+        <input {...getInputProps()} />
+        <p style={{color: 'black' }}>Drag 'n' drop some files here, or click to select files</p>
+        <em style={{color:'black', fontSize: '12px'}}>(Only *.eml and *.txt images will be accepted)</em>
+      </div>
+      <div>
+        <h2>Accepted files</h2>
+        <ul style={{ padding: '0px'}}>{acceptedFileItems}</ul>
+        <h2>Rejected files</h2>
+        <ul style={{ padding: '0px'}}>{fileRejectionItems}</ul>
+      </div>
+    </section>
   );
 }

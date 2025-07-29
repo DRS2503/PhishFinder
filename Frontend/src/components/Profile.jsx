@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
-import Dropzone from '../components/Dropzone';
+import Dropzone from './Dropzone';
 import { useAuth } from '../Context/AuthContext'
 import { Link, useNavigate } from 'react-router-dom'
 
-export default function DashBoard() {
+export default function Profile() {
   const [error,setError] = useState("")
   const { currentUser, logout } = useAuth()
   const nav = useNavigate()
