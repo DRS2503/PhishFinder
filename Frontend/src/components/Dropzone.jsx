@@ -34,20 +34,29 @@ export default function Dropzone(props) {
     </li>
   ));
 
-  useEffect(() => {
-    acceptedFiles.forEach((file) => {
-      const reader = new FileReader()
 
-      reader.onabort = () => console.log('file reading was aborted')
-      reader.onerror = () => console.log('file reading has failed')
-      reader.onload = () => {
-      // Do whatever you want with the file contents
-        const emailStr = reader.result
-        console.log(emailStr)
+// When a file is selected, send it to the Flask backend (/upload) for phishing detection.
+// This replaces the old FileReader logic so the backend can actually receive the file and return a JSON prediction (Safe, Suspicious, or Malicious).
 
-      }
-      reader.readAsText(file)
+useEffect(() => {
+  if (acceptedFiles.length === 0) return;
+
+  const file = acceptedFiles[0];
+  const formData = new FormData();
+  formData.append('file', file);
+
+  fetch('http://127.0.0.1:5000/upload', {
+    method: 'POST',
+    body: formData,
+  })
+    .then(res => res.json())
+    .then(data => {
+      console.log('Prediction result:', data);
+      // You can store data in state here if you want to display it
     })
+    .catch(err => {
+      console.error('Upload failed:', err);
+    });
 }, [acceptedFiles]);
 
   return (

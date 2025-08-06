@@ -6,7 +6,7 @@ from werkzeug.utils import secure_filename
 upload_blueprint = Blueprint("upload", __name__)
 
 UPLOAD_FOLDER = "uploads"
-ALLOWED_EXTENSIONS = {"csv", "zip"}
+ALLOWED_EXTENSIONS = {"csv", "zip", "txt", "eml"}
 
 if not os.path.exists(UPLOAD_FOLDER):
     os.makedirs(UPLOAD_FOLDER)
