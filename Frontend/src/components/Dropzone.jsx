@@ -35,9 +35,6 @@ export default function Dropzone(props) {
   ));
 
 
-// When a file is selected, send it to the Flask backend (/upload) for phishing detection.
-// This replaces the old FileReader logic so the backend can actually receive the file and return a JSON prediction (Safe, Suspicious, or Malicious).
-
 useEffect(() => {
   if (acceptedFiles.length === 0) return;
 
@@ -52,7 +49,7 @@ useEffect(() => {
     .then(res => res.json())
     .then(data => {
       console.log('Prediction result:', data);
-      // You can store data in state here if you want to display it
+
     })
     .catch(err => {
       console.error('Upload failed:', err);
