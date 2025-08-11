@@ -35,3 +35,9 @@ python3 -m venv venv
 source venv/bin/activate (you should see (venv) next to your username in the terminal)
 pip install -r requirements.txt
 ```
+
+
+DRS2503 Derek Schramm  
+lucas246876 Lucas  
+AlexDDA Alex  
+mkjdz Matthew Kajdasz
