@@ -39,5 +39,5 @@ pip install -r requirements.txt
 
 DRS2503 Derek Schramm  
 lucas246876 Lucas  
-AlexDDA Alex  
+AlexDDA Alexander DiCicco  
 mkjdz Matthew Kajdasz
